@@ -4,13 +4,24 @@
   "description": "Backend for ioe notice app",
   "main": "server.js",
   "scripts": {
-    "dev": "node --watch server.js"
+    "dev": "node --watch server.js",
+    "lint:fix": "eslint --fix ./*.js"
   },
+  "type": "module",
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fastify/mongodb": "^6.2.0",
     "axios": "^1.3.3",
     "cheerio": "^1.0.0-rc.12",
-    "fastify": "^4.13.0"
+    "dotenv": "^16.0.3",
+    "fastify": "^4.13.0",
+    "fastify-cron": "^1.3.1",
+    "sugar-date": "^2.0.6"
+  },
+  "devDependencies": {
+    "eslint": "^8.34.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5"
   }
 }

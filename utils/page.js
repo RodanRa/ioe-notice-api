@@ -1,14 +1,10 @@
-const axios = require('axios')
+import axios from 'axios';
 
-async function getPageContent(pageNumber) {
+export default async function getPageContent(pageNumber) {
   try {
-    const response = await axios.get(`https://exam.ioe.edu.np/?page=${pageNumber}`)
-    return response.data
+    const response = await axios.get(`https://exam.ioe.edu.np/?page=${pageNumber}`);
+    return response.data;
   } catch (error) {
-    return new Error(error)
+    return new Error(error);
   }
-}
-
-module.exports = {
-  getPageContent,
 }
