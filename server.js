@@ -10,7 +10,7 @@ const fastify = Fastify({ logger: true });
 
 fastify.register(mongodb, {
   forceClose: true,
-  url: process.env.MONGO_ATLAS_URL
+  url: "mongodb+srv://ioenotice:Ck7IYBrhOknbN5oa@ioenotice-mumbai.5ewfpss.mongodb.net/?retryWrites=true&w=majority",
 })
 
 fastify.get('/status', async () => ({ status: 'Healthy' }));
